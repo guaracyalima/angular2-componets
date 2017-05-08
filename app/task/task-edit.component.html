@@ -1,0 +1,23 @@
+
+
+<div class="container">
+
+    <div class="row">
+        
+        <div *ngIf="task">
+
+            <form action="">
+                <h2>Edit task {{ task.id }}</h2>
+
+
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input type="text" id="name" [(ngModel)]="task.name" class="form-control"/>
+                </div>
+            </form>
+            
+            
+        </div>
+
+    </div>
+</div>

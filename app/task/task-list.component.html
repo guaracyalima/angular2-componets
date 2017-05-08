@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+
+        <h2> Minhas tarefas </h2>
+
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Acoes</th>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr *ngFor="let o of tasks">
+                <td> {{ o.id }} </td>
+                <td>{{ o.name}} </td>
+                <td>
+                    <button class="btn btn-primary" (click)="selectTask(o)">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                    </button>
+
+                    <button class="btn btn-danger" (click)="deleteTask(o.id)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </td>
+            </tr>
+            </tbody>
+
+        </table>
+        <task-edit [task]="selectedTask"></task-edit>
+
+    </div>
+</div>
